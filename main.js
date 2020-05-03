@@ -7,15 +7,15 @@ const audioContext =
     : new webkitAudioContext()
 
 // Listen for data from web sockets.
-const ws = new Primus('ws://localhost:3000/primus')
-ws.on('data', data => {
+const ws = new Primus('ws://54.92.217.246:3000/primus')
+ws.on('data', (data) => {
   playAudioVisual(data.x, data.y, data.color)
 })
 
 // Handle all clicks on the click area.
 clickArea.addEventListener(
   'click',
-  event => {
+  (event) => {
     unlockMobile()
 
     // Place color dot in this location.
@@ -60,7 +60,7 @@ function playAudioVisual(x, y, color = 'blue') {
     560,
     590,
     610,
-    640
+    640,
   ]
   synth.pitch(sounds[Math.round((x / window.innerWidth) * sounds.length)])
   synth.start()
