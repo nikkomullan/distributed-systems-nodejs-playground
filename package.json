@@ -17,7 +17,7 @@
     "loadbalancer": "^0.9.26",
     "primus": "^7.3.4",
     "submono": "^0.1.1",
-    "ws": "^7.2.3"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
